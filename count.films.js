@@ -50,3 +50,5 @@ function log(a, b, c) {
 }
 
 log(...num);
+
+//add
