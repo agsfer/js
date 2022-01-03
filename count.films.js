@@ -41,3 +41,12 @@ clone.b = 9;
 console.log(clone);
 console.log(newObj);
 
+const num = [1, 2, 3];
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+log(...num);
