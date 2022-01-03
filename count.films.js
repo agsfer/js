@@ -5,15 +5,39 @@ const obj = {
     colors: {
         border: "black",
         background: "red"
+    },
+    makeTest: function() {
+        console.log("Teeeest");
     }
 };
 
-for(let key in obj) {
+obj.makeTest();
+
+/* for(let key in obj) {
     if( typeof(obj[key]) === 'object') {
         console.log('Obect!')
         for (let i in obj[key]) {
             console.log(`Свойство ${i} - ${obj[key][i]}`);
         }
+    } else {
+        console.log(`Свойство ${key} - ${obj[key]}`);
     }
-    console.log(`Свойство ${key} - ${obj[key]}`);
-}
+} */
+
+//console.log(Object.keys(obj).length);
+
+const newObj = {
+    a: 2,
+    b: 4,
+    c: 5
+};
+
+const copyObj = newObj;
+newObj.a = 10;
+
+const clone = Object.assign({}, newObj);
+clone.b = 9;
+
+console.log(clone);
+console.log(newObj);
+
